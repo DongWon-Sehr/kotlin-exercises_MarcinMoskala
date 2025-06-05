@@ -25,7 +25,7 @@ dependencies {
     implementation("io.ktor:ktor-client-core:3.0.2")
     implementation("io.ktor:ktor-client-java:3.0.2")
     implementation("io.ktor:ktor-client-websockets:3.0.2")
-//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.7.3")
 }
 
 tasks.withType<KotlinCompile> {
@@ -43,6 +43,10 @@ java.sourceSets["test"].java {
 
 powerAssert {
     functions = listOf("kotlin.assert", "kotlin.test.assertEquals")
+}
+
+tasks.test {
+    outputs.upToDateWhen { false }
 }
 
 // Uncomment to use Loom
