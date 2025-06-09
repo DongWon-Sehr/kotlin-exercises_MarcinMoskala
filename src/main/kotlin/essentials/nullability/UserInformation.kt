@@ -6,9 +6,9 @@ import kotlin.test.assertEquals
 
 fun processUserInformation(user: User?): String {
     if (user == null) return "Missing user information"
-    if (user?.email?.email.isNullOrEmpty()) return "Missing email"
+    if (user.email?.email.isNullOrEmpty()) return "Missing email"
     val name: String = requireNotNull(user.name)
-    val age: Int = user?.age ?: 0
+    val age: Int = user.age ?: 0
     val email: String = user.email.email
     return "User $name is $age years old, email: $email"
 }
