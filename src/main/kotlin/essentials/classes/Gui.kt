@@ -26,7 +26,7 @@ class Toggle(id: String, var isOn: Boolean = false) : View(id, true) {
     }
 }
 
-fun main() {
+fun main() { // Test note
     val view = View(
        id = "v1",
        isVisible = false,
