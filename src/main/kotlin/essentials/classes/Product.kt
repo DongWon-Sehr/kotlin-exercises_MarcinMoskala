@@ -19,8 +19,7 @@ class Product(
     }
 
     fun restock(amount: Int) {
-        val amount = if (amount < 0) 0 else amount
-        quantity = quantity + amount
+        if (amount > 0) quantity+= amount
     }
 }
 
